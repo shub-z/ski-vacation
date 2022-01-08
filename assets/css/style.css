@@ -7,7 +7,7 @@
 /*Header*/
 
 .hero {
-  padding: 20px 35px;
+  padding: .5rem;
   background-color: var(--blue);
   color: var(--blue);
   display: flex;
@@ -47,7 +47,7 @@
 .headerFont {
   padding: 10px 15px;
   font-size: 30px;
-  text-decoration: wavy;
+  text-decoration: none;
   color:#bdb7b7;
 }
 
@@ -84,7 +84,7 @@
 
 .searchForm {
   display:inline;
-  margin-top: 0rem;
+  margin-top: 0.19rem;
 }
 
 
