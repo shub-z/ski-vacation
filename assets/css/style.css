@@ -87,7 +87,35 @@
   margin-top: 0.19rem;
 }
 
+/*footer*/
 
+#navBarFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0px 0px;
+  margin: auto;
+}
+
+.footerFont {
+  padding: 10px 15px;
+  font-size: 30px;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.footer {
+  padding: .5rem;
+  background-color: var(--blue);
+  color: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  background-position: center;
+}
 
 
 
