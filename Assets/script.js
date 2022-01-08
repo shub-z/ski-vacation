@@ -142,7 +142,7 @@ $(document).ready(function () {
                    
                     searchHistory.unshift(mountainName);
                     
-                    storeCities();
+                    storedMountains();
                     
                     renderButtons();
                 }
