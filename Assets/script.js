@@ -167,4 +167,7 @@ $(document).ready(function () {
                 fiveDay(lon, lat);
             });
         }
+    const call = (trailMap) => {
+        let trailMap
+    }
 });    
