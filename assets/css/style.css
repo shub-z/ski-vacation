@@ -1,6 +1,6 @@
 /*Color Scheme*/
 :root {
-  --blue: rgb(65, 65, 218);
+  --blue: rgb(80, 80, 231);
   --white: #bdb7b7;
 }
 
@@ -148,6 +148,29 @@
   font-size: 17px;
   font-style:bold;
   color:black;
+}
+
+.topSkiResorts {
+  list-style-position: outside;
+  background-color: lightgrey;
+  padding-left: 3rem;
+}
+
+.savedMountains {
+  list-style-position: outside;
+  background-color: lightgrey;
+  padding-left: 3rem;
+}
+
+.mapContent {
+  list-style-position: outside;
+  background-color: lightgrey;
+  padding-left: 3rem;
+}
+
+/*map*/
+#map {
+  height:100%
 }
 
 
