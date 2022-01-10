@@ -7,32 +7,54 @@
     <link rel="stylesheet" href="./assets/css/style.css"
     />
     <title>First-Lines</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
 
 <!--Header-->
     <header class= "hero">
-        <div>
-            <h1 class= "app-title"> First-Lines </h1>
-        </div>
-        <nav id="navBar">
-            <ul id="navUl">
-                <li>
-                    <div class="hero">
-                        <span class="headerFont">Search by Mountain</span>
-                        <form class="searchForm">
-                            <input name="mountainSearch" id="mountainSearch" type="text" autofocus="true" class="form-input" />
-                                <div id="alignButton">
-                                    <button type="submit" class="btn">Search</button>
-                                </div>
-                        </form>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://bulma.io">
+                <p class="title is-2">First Lines</p>
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item">
+                  Home
+                </a>
+          
+                <a class="navbar-item">
+                  Book Your Trip
+                </a>
+          
+    
+                <a class="navbar-item">
+                  View your Mountains
+                </a> 
+            </div>
+          
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <input class="searchForMountain input" placeholder="Mountain">
+                    <div class="control navbar-end">
+                        <a class="button is-info">
+                            Search
+                        </a>
                     </div>
-                </li>
-                <li>
-                    <a  href="./" class="headerFont">Book Your Trip</a>
-                </li>
-            </ul>
-        </nav>
+                  </div>
+                </div>
+              </div>
+          </nav>
     </header>
 
     <!--Hero/jumbotron-->
@@ -40,21 +62,47 @@
         <div class="jumbotron-cta">
             <h2>Find the best lines to Ski</h2>
             <p>
-               <strong> We all know that finding the best mountain to ski at for your next vacation can be a daunting task.
-                Here at First-Lines, we have collected all of the data you need to make an informed decision on where 
+               <strong> We all know that finding the best mountain to ski at for your next vacation can be a daunting task. Here at First-Lines, we have collected all of the data you need to make an informed decision on where 
                 to go next! Look at our doppler map to find where the snow is going to be, find nearby mountains, and view 
                 their five day forcast. Once you have choosen a mountain, please contact one of our travel agents to book your
                 trip! </strong>
             </p>
         </div>
     </section>
-
-
-
-
-
 <br>
 <br>
+    <section class="columns">
+        <div class="column is-one-third">
+            <h3 class="title">
+                Where the Powder is:
+            </h3>
+            <div class="content">
+                <ol class="topSkiResorts">
+                    <li>Vail</li>
+                    <li>Okemo</li>
+                    <li>PowderBowl</li>
+                    <li>Aspen</li>
+                    <li>Jackson Hole</li>
+                </ol>
+            </div>
+            <h3 class="title">
+            Mountain Search History
+            </h3>
+            <div class="content">
+                <ul class="savedMountains">
+                    <li>Mountain 1</li>
+                    <li>mountain 2</li>
+                    <li>mountain 3</li>
+                    <li>mountian 4</li>
+                    <li>mountain 5</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mapContent column is-7">
+            <p>Dopplar Radar</p>
+            <p>Dopplar Radar</p>
+        </div>
+    </section>
 <br>
 <br>
 
