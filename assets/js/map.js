@@ -13,10 +13,3 @@ function initMap() {
 }
 
 initMap()
-
-new Vue({
-    el: '#app',
-    data: {
-        showNav: false
-    }
-  });

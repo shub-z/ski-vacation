@@ -2,7 +2,7 @@ $(document).ready(function () {
     var searchHistory = [];
     const momentDay = moment().format('dddd, MMMM Do');
     $('.todayDate').prepend(momentDay);
-​
+    
     for (var i = 1; i < 6; i++) {
         $(`#${i}Date`).text(moment().add(i, 'd').format('dddd, MMMM Do'));
     }
@@ -14,71 +14,18 @@ $(document).ready(function () {
               if (mountain === '') {
             return;
         }
-​
-        
+
         call();
-​
-        
+
         $('form')[0].reset();
     });
-​
-    
-    $('.searchHistoryEl').on('click', '.historyBtn', function (event) {
-        event.preventDefault();
-        
-        let btnMtnName = $(this).text();
-        
-        call(btnMtnName);
-    });
-​
-    $('#clearBtn').on('click', function (event) {
-        event.preventDefault();
-        
-        window.localStorage.clear();
-        
-        $('.searchHistoryEl').empty();
-        searchHistory = [];
-        renderButtons();
-        
-        $('form')[0].reset();
-    });
-​
-    
-    const renderButtons = () => {
-        
-        $('.searchHistoryEl').html('');
-        
-        for (var j = 0; j < searchHistory.length; j++) {
-            
-            let mountainName1 = searchHistory[j];
-            let historyBtn = $(
-                '<button type="button" class="btn btn-primary btn-lg btn-block historyBtn">'
-            ).text(mountainName1);
-           
-            $('.searchHistoryEl').prepend(historyBtn);
-        }
-    };
-    
-    const init = () => {
-        
-        let storedMountains = JSON.parse(localStorage.getItem('searchHistory'));
-        
-        if (storedMountains !== null) {
-            searchHistory = storedMountains;
-        }
-        
-        renderButtons();
-    };
-​
-    init();
-    
+  
     const storedMountains = () =>
         localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
-​
-  
+
     const uvCall = (lon, lat) => {
         let uvQueryURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&units=imperial&appid=77cb488591d883bec900753d1136d81c`;
-​
+        
         $.ajax({
             url: uvQueryURL,
             method: 'GET',
@@ -99,11 +46,9 @@ $(document).ready(function () {
             }
         });
     };
-​
-    
+  
     const fiveDay = (lon, lat) => {
         let fiveQueryURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=77cb488591d883bec900753d1136d81c`;
-​
         $.ajax({
             url: fiveQueryURL,
             method: 'GET',
@@ -126,7 +71,6 @@ $(document).ready(function () {
             }
         });
     };
-​
     
     const call = (btnMtnName) => {
         let mountainName = btnMtnName || $('input').val();
