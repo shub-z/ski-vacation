@@ -1,9 +1,19 @@
-//Code for map and fetch
+// var city = Ludlow
 
-// function getMountainData() {
-//     var response = fetch("http://api.powderlin.es/stations");
-//     console.log(response)
-// }
+// //Code for map and fetch
+
+// var getUserCity = function(city) {
+//     //format the URL
+//     var apiUrl = "http://api.powderlin.es/stations"
+// //make a request to the URL
+// fetch(apiUrl).then(function(response) {
+//     response.json().then(function(data) {
+//         console.log(data);
+// });
+// });
+// };
+
+getMountainData()
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
