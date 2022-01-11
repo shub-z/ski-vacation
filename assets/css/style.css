@@ -269,7 +269,7 @@
 }
 .footer {
   padding: .5rem;
-  background-color: var(--blue);
+  background-color: #fafafa;
   color: var(--blue);
   display: flex;
   justify-content: space-between;
