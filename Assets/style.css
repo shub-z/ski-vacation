@@ -1,108 +1,141 @@
+/*Color Scheme*/
 :root {
-    --blue: rgb(65, 65, 218);
-    --white: #bdb7b7;
-  }
-  
-  /*Header*/
-  
-  .hero {
-    padding: .5rem;
-    background-color: var(--blue);
-    color: var(--blue);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: sticky;
-    background-position: center;
-    
-  }
-  
-  .app-title {
-    font-size: 3rem;
-    color: var(--white);
-    padding: 0;
-    display: flex;
-    justify-content: left;
-    align-items: center
-  }
-  
-  /*header*/
-  
-  #navBar {
-    margin: 7px 0;
-    
-  }
-  
-  #navUl {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    padding: 0px 0px;
-    margin: auto;
-  }
-  
-  .headerFont {
-    padding: 10px 15px;
-    font-size: 30px;
-    text-decoration: none;
-    color:#bdb7b7;
-  }
-  
-  .card {
-    margin: 30px 0 0 0;
-    border: 3px solid var(--dark);
-    border-radius: var(--border-radius);
-  }
-  
-  .btn {
-    font-size: 15px;
-    text-decoration:none;
-    padding: 0px;
-    width: 100%;
-    display: block;
-    margin: 15px 1px 3px;
-    color: black;
-    border: 6px;
-    outline: none;
-    background-color: burlywood ;
-    box-shadow: 3px 3px var(--dark);
-    transform: translate(-1px, -1px);
-  }
-  
-  #alignButton {
-    text-align: right;
-    float: right;
-  }
-  
-  .form-input {
-    padding:0%;
-    margin-top: 13px;
-  }
-  
-  .searchForm {
-    display:inline;
-    margin-top: 0.19rem;
-  }
-  
-.container {
-    margin: 2rem auto;
-  }
-  .weather-card {
-    display: inline-block;
-    width: 100%;
-    border-radius: 15px;
-  }
-  .card-container {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
+  --blue: rgb(80, 80, 231);
+  --white: #bdb7b7;
+}
 
-.box {
+/*Header*/
+
+.hero {
+  padding: .5rem;
+  background-color: var(--blue);
+  color: var(--blue);
   display: flex;
-  grid-row: auto;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  background-position: center;
+  
+}
+
+.app-title {
+  font-size: 3rem;
+  color: var(--white);
+  padding: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center
+}
+
+/*header*/
+
+#navBar {
+  margin: 7px 0;
+  
+}
+
+#navUl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0px 0px;
+  margin: auto;
+}
+
+.headerFont {
+  padding: 10px 15px;
+  font-size: 30px;
+  text-decoration: none;
+  color:#bdb7b7;
+}
+
+.card {
+  margin: 30px 0 0 0;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+}
+
+.btn {
+  font-size: 15px;
+  text-decoration:none;
+  padding: 0px;
+  width: 100%;
+  display: block;
+  margin: 15px 1px 3px;
+  color: black;
+  border: 6px;
+  outline: none;
+  background-color: burlywood ;
+  box-shadow: 3px 3px var(--dark);
+  transform: translate(-1px, -1px);
+}
+
+#alignButton {
+  text-align: right;
+  float: right;
+}
+
+.form-input {
+  padding:0%;
+  margin-top: 13px;
+}
+
+.searchForm {
+  display:inline;
+  margin-top: 0.19rem;
+}
+
+/*footer*/
+
+#navBarFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0px 0px;
+  margin: auto;
+}
+
+.footerFont {
+  padding: 10px 15px;
+  font-size: 30px;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.footer {
+  padding: .5rem;
+  background-color: var(--blue);
+  color: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  background-position: center;
+}
+.table {
+  width: 100%;
+}
+.table th {
+  white-space: nowrap;
+}
+.table td {
+  width: 75%;
+}
+
+.container {
+  margin: 2rem auto;
+}
+.card {
+  display: inline-block;
+  width: 100%;
+  border-radius: 15px;
+}
+.card-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
