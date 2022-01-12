@@ -20,9 +20,6 @@ $(document).ready(function () {
         $('form')[0].reset();
     });
   
-    const storedMountains = () =>
-        localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
-  
     const fiveDay = (lon, lat) => {
         let fiveQueryURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=77cb488591d883bec900753d1136d81c`;
         $.ajax({
@@ -57,46 +54,22 @@ $(document).ready(function () {
     
     };
 
-//     const call = (btnMtnName) => {
-//         let mountainName = btnMtnName || $('input').val();
-        
-//         let queryURL = `https://api.openweathermap.org/data/2.5/weather?lat=" + & {lat}&units=imperial&appid=77cb488591d883bec900753d1136d81c`;
-        
-//         $.ajax({
-//             url: queryURL,
-//             method: 'GET',
-//         })
-//             .then(function (response) {
-//                 if (!btnMtnName) {
-                   
-//                     searchHistory.unshift(lat);
-                    
-//                     storedMountains();
-                    
-//                     renderButtons();
-//                 }
+                var lon = response.coord.lon;
+                var lat = response.coord.lat;
                 
-//                 var lon = response.coord.lon;
-//                 var lat = response.coord.lat;
+                $('#fiveDay').text(response.name);
+                $('#currentImg').attr(
+                    'src',
+                    `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
+                );
+                $('#tempData').html(`${response.main.temp} &#8457;`);
+                $('#humidData').html(`${response.main.humidity}%`);
+                $('#windData').html(`${response.wind.speed} mph`);
+                $('#windArrow').css({
+                    transform: `rotate(${response.wind.deg}deg)`,
+                });
                 
-//                 $('#cityName').text(response.name);
-//                 $('#currentImg').attr(
-//                     'src',
-//                     `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
-//                 );
-//                 $('#tempData').html(`${response.main.temp} &#8457;`);
-//                 $('#humidData').html(`${response.main.humidity}%`);
-//                 $('#windData').html(`${response.wind.speed} mph`);
-//                 $('#windArrow').css({
-//                     transform: `rotate(${response.wind.deg}deg)`,
-//                 });
-                
-//                 uvCall(lon, lat);
+                uvCall(lon, lat);
         
-//                 fiveDay(lon, lat);
-//             });
-//         }
-// });  
-
-
-});
+                fiveDay(lon, lat);
+            });
