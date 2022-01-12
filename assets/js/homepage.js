@@ -16,8 +16,8 @@ for (var i = 0; i < data.length; i++) {
     nameArray.push(data[i].name);
     locationArray.push(data[i].location);
 }
-console.log(nameArray)
-console.log(locationArray)
+// console.log(nameArray)
+// console.log(locationArray)
 })
 // var nameArray = []
 // var locationArray = []
