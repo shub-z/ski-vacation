@@ -45,46 +45,58 @@ $(document).ready(function () {
         });
     };
     
-    const call = (btnMtnName) => {
-        let mountainName = btnMtnName || $('input').val();
-        
-        let queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${mountainName}&units=imperial&appid=77cb488591d883bec900753d1136d81c`;
-        
-        $.ajax({
-            url: queryURL,
-            method: 'GET',
-        })
-            .then(function (response) {
-                if (!btnMtnName) {
-                   
-                    searchHistory.unshift(mountainName);
-                    
-                    storedMountains();
-                    
-                    renderButtons();
-                }
-                
-                var lon = response.coord.lon;
-                var lat = response.coord.lat;
-                
-                $('#cityName').text(response.name);
-                $('#currentImg').attr(
-                    'src',
-                    `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
-                );
-                $('#tempData').html(`${response.main.temp} &#8457;`);
-                $('#humidData').html(`${response.main.humidity}%`);
-                $('#windData').html(`${response.wind.speed} mph`);
-                $('#windArrow').css({
-                    transform: `rotate(${response.wind.deg}deg)`,
-                });
-                
-                uvCall(lon, lat);
-        
-                fiveDay(lon, lat);
+    var mountainConditions = (lon, lat) => {
+        let mountainQueryURL = "http://api.powderlin.es/closest_stations?lat=47.3974&lng=-121.3958&data=true&days=3&count=3"
+    }
+    var getMountainConditions = function() {
+        fetch(mountainQueryURL).then(function(Response){
+            Response.text().then(function(data){
+                console.log(data);
             });
-        }
-});  
+        });
+    
+    };
+
+//     const call = (btnMtnName) => {
+//         let mountainName = btnMtnName || $('input').val();
+        
+//         let queryURL = `https://api.openweathermap.org/data/2.5/weather?lat=" + & {lat}&units=imperial&appid=77cb488591d883bec900753d1136d81c`;
+        
+//         $.ajax({
+//             url: queryURL,
+//             method: 'GET',
+//         })
+//             .then(function (response) {
+//                 if (!btnMtnName) {
+                   
+//                     searchHistory.unshift(lat);
+                    
+//                     storedMountains();
+                    
+//                     renderButtons();
+//                 }
+                
+//                 var lon = response.coord.lon;
+//                 var lat = response.coord.lat;
+                
+//                 $('#cityName').text(response.name);
+//                 $('#currentImg').attr(
+//                     'src',
+//                     `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
+//                 );
+//                 $('#tempData').html(`${response.main.temp} &#8457;`);
+//                 $('#humidData').html(`${response.main.humidity}%`);
+//                 $('#windData').html(`${response.wind.speed} mph`);
+//                 $('#windArrow').css({
+//                     transform: `rotate(${response.wind.deg}deg)`,
+//                 });
+                
+//                 uvCall(lon, lat);
+        
+//                 fiveDay(lon, lat);
+//             });
+//         }
+// });  
 
 
-
+});
