@@ -53,10 +53,10 @@ $(document).ready(function () {
         });
     
     };
-
+                var lngLat = locationArray;
                 var lon = response.coord.lon;
                 var lat = response.coord.lat;
-                
+                console.log(lngLat)
                 $('#fiveDay').text(response.name);
                 $('#currentImg').attr(
                     'src',
