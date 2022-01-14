@@ -4,7 +4,7 @@ var stationTriplet = `https://api.allorigins.win/get?url=http://api.powderlin.es
 var stationLocation = "https://api.allorigins.win/get?url=http://api.powderlin.es/closest_stations?lat=47.3974&lng=-121.3958&data=true&days=1&count=1"
 var searchForMountain = document.querySelector('.searchForMountain');
 var searchBtn = document.querySelector('.mountainSearchButton')
-
+console.log(searchBtn)
 
 var nameArray = []
 var locationArray = []
@@ -39,6 +39,7 @@ function initMap() {
         center: {lat: 41.43, lng: -101.01},
         zoom: 4
     })
+    console.log(map)
     for (var i = 0; i < nameArray.length; i++) {
     new google.maps.Marker({
         position: locationArray[i],
@@ -56,8 +57,9 @@ var formSubmitHandler = function(event) {
     var name = searchForMountain.value.trim();
 
     if (name){
-        nameArray.includes(name)
-        console.log("statement is true")
+        console.log(nameArray)
+        if  (nameArray.includes(name)) {
+            console.log("statement is true")}
     }
 
     else {

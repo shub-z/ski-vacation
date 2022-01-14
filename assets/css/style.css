@@ -300,5 +300,32 @@
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
+/* book your trip page css */
+.staff-imgs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  }
+  
+  .staff1 {
+    flex:1;
+  
+  }
+  
+  
+  .staff2 {
+    flex:1;
+  
+  }
+  
+  .staff3 {
+    flex:1;
+  
+  }
+  
+  .staff4 {
+    flex:1;
+  }
+
 
 
