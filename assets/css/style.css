@@ -134,20 +134,20 @@
   width: 35%;
   text-align: right;
   margin: 3.5%;
-  color: rgb(0, 0, 0);
+  color: var(--blue);
   font-size: 18px;
   line-height: 1.2;
 }
 .jumbotron-cta h2 {
   font-style: bold;
   font-size: 32px;
-  color: black;
+  color: rgb(4, 21, 117);
 }
 
-.jumbotron-cta p {
+.jumbotron-cta p strong {
   font-size: 17px;
   font-style:bold;
-  color:black;
+  color: rgb(4, 21, 117);
 }
 
 .topSkiResorts {
@@ -298,6 +298,10 @@
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.heroContent {
+  backdrop-filter: blur(10px);
 }
 
 /* book your trip page css */
