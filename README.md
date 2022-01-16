@@ -1,9 +1,22 @@
-# ski-vacation
-an app used to find good places to have a good ski vacation.
-When the user views the home page they will see a mountain map listing all of the mountains on the west coast 
-Then they can click on a marker and add that mountain to their favorites list 
-The user will also a top 5 mountains list. Which lists the mountains with the deepest snow 
-When you visit the view your mountain tab you are shown a trail map for the mountain you chose and a 5 day weather forecast 
-Then the user can make an informed decision on their ski trip 
+# First Lines
 
+Welcome to First-lines, our application allows users to plan their perfect backcountry ski or snowboarding tour.
+
+## Purpose 
+Users are able to analyze snow telemetry data alongside local weather reports to find the most favorable conditions.
+
+## Built With
+Bulma.io
+GoogleAPI
+Powderli.es API
+OpenWeather API
+
+## Website
 https://shub-z.github.io/ski-vacation/
+
+## Contributions
+Made by Sean Mckeag, Zachary Steuer, Shahbaaz Mustaafa, and Islam Muhamaad
+
+## @2022 UCONN Coding BootCamp
+
+![image]

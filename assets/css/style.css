@@ -310,6 +310,10 @@
   flex-direction: row;
   justify-content: center;
   }
+
+  .seanImage {
+    height: 160px;
+  }
   
   .staff1 {
     flex:1;
