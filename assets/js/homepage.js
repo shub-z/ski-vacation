@@ -9,6 +9,7 @@ console.log(searchBtn)
 var nameArray = []
 var locationArray = []
 var stationArray = []
+var savedMountains = []
 
 
 fetch(stationTriplet)
@@ -59,7 +60,10 @@ var formSubmitHandler = function(event) {
     if (name){
         console.log(nameArray)
         if  (nameArray.includes(name)) {
-            console.log("statement is true")}
+            console.log("statement is true")
+            savedMountains.push(name)
+            localStorage.setItem("mountains", savedMountains)
+        }
     }
 
     else {
